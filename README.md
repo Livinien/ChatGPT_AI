@@ -1,5 +1,5 @@
 CHATAI
-
+moustapha djebbar flavien alexandru
 - Le chat devra répondre à quelques questions simples (prédéfinies), et listées dans une page d'aide accessible depuis l'interface
 
 
