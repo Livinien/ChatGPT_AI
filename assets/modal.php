@@ -8,13 +8,11 @@
                <div class="px-3 pt-2">
                    <div class="form-group">
                        <p class="fw-semibold fs-7">This is a free research preview.</p>
-                   </div>
-   
+                   </div>  
                    <div class="form-group bg-dark-subtle border-0 rounded d-flex align-items-center justify-content-around p-3 mb-3">
                        <img width="22" class="ms-2 me-4" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/microscope_1f52c.png">
                        <p class="m-auto">Our goal is to get external feedback in order to improve our systems and make them safer.</p>
                    </div>
-                   
                    <div class="form-group bg-dark-subtle border-0 rounded d-flex align-items-center justify-content-around p-3 mb-3">
                         <img width="22" class="ms-2 me-4" src="https://emojigraph.org/media/apple/police-car-light_1f6a8.png"/>
                         <p class="m-auto">While we have safeguards in place, the system may </br>occasionally generate incorrect or misleading information </br> and produce offensive or biasedcontent. It is not intended to give advice.</p>
