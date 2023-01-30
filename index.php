@@ -1,70 +1,63 @@
-<?php include_once './assets/header.php';?>
+<?php 
+include 'assets/header.php';
+include 'assets/nav.php';
+?>
+<main class="position-relative col-12 col-md-9 col-xl-10 d-flex flex-column justify-content-between"
+    style="background-color: #343541;">
+    <div id="message" class="col-12">
+    </div>
+    <section id="title" class="col-11 col-lg-10 col-xl-8 col-xxl-6 mx-auto mt-sm-5 pt-sm-5">
 
-<body>
-    <?php include_once './assets/navbar.php'; include_once './assets/modal.php'; ?>
+        <h1 class="text-start text-sm-center m-5 fw-bold">ChatGPT</h1>
+        <div class="d-flex justify-content-evenly text-center fs-7">
+            <div class="d-flex flex-column col-4 mb-5 ">
 
-
-
-    <!-- HOME -->
-
-    <div class="container-right col col-lg-10 text-center" id="home">
-        <div id="message"></div>
-
-        <div id="title">
-
-            <h1 class="mt-1">ChatGPT</h1>
-
-            <div class="grid text-center">
-                <div class="row mt-1">
-                    <div class="col">
-                        <i class="icone bi bi-brightness-high"></i><br>
-                        <h6 class="title">Examples</h6>
-                        <p class="subtitle_GPT mt-4">"Explain quantum computing in simple terms" <i
-                                class="bi bi-arrow-right"></i></p>
-                        <p class="subtitle_GPT mt-4">"Got any creative ideas for a 10 year old's birthday ?" <i
-                                class="bi bi-arrow-right"></i></p>
-                        <p class="subtitle_GPT mt-4">"How do i make an HTTP request in Javascript ?" <i
-                                class="bi bi-arrow-right"></i></p>
-                    </div>
-
-                    <div class="col">
-                        <i class="icone bi bi-lightning-charge"></i><br>
-                        <h6 class="title">Capabilities</h6>
-                        <p class="subtitle_GPT mt-4">"Remembers what user said earlier in the conversation"</p>
-                        <p class="subtitle_GPT mt-4">"Allows user to provide follow-up corrections"</p>
-                        <p class="subtitle_GPT mt-4">"Trained to decline inappropriate requests"</p>
-                    </div>
-
-                    <div class="col">
-                        <i class="icone bi bi-exclamation-triangle"></i><br>
-                        <h6 class="title">Limitations</h6>
-                        <p class="subtitle_GPT mt-4">"May occasionally generate incorrect information"</p>
-                        <p class="subtitle_GPT mt-4">"May occasionally produce harmful instructions or baised
-                            content"</p>
-                        <p class="subtitle_GPT mt-4">"Limited knowledge of world and events after 2021"</p>
-                    </div>
+                <i class="bi bi-sun fs-4"></i>
+                <h2 class="fs-5 my-3">Examples</h2>
+                <div class="d-inline m-1 m-md-2 rounded-3 px-1 px-sm-2 py-1 py-sm-3" style="background-color: #3e3f4b;">
+                    "Explain quantum computing in simple terms" <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="d-inline m-1 m-md-2 rounded-3 px-1 px-sm-2 py-1 py-sm-3" style="background-color: #3e3f4b;">
+                    "Got any creative ideas for a 10 year old's birthday" <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="d-inline m-1 m-md-2 rounded-3 px-1 px-sm-2 py-1 py-sm-3" style="background-color: #3e3f4b;">
+                    "How do I make an HTTP request in Javascript?" <i class="bi bi-arrow-right"></i>
                 </div>
             </div>
-
-            <!-- SEARCH BAR AND SUBTITLE -->
-
-            <div class="input-group right-search mb-5">
-                <input type="text" class="form-control input-right" aria-label="Recipient's username"
-                    aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button"><i class="bi bi-send"></i></button>
+            <div class="d-flex flex-column col-4 mb-5">
+                <i class="bi bi-lightning-charge fs-4"></i>
+                <h2 class="fs-5 my-3">Capabilities</h2>
+                <div class="d-inline  m-1 m-md-2 rounded-3 px-1 px-sm-2 py-1 py-sm-3"
+                    style="background-color: #3e3f4b;">
+                    Remembers what user said earlier in the conversation
+                </div>
+                <div class="d-inline  m-1 m-md-2 rounded-3 px-1 px-sm-2 py-1 py-sm-3"
+                    style="background-color: #3e3f4b;">
+                    Allows user to provide follow-up corrections
+                </div>
+                <div class="d-inline  m-1 m-md-2 rounded-3 px-1 px-sm-2  py-1 py-sm-3"
+                    style="background-color: #3e3f4b;">
+                    Trained to decline inappropriate requests
+                </div>
+            </div>
+            <div class="d-flex flex-column col-4 mb-5">
+                <i class="bi bi-exclamation-triangle fs-4"></i>
+                <h2 class="fs-5 my-3">Limitations</h2>
+                <div class="d-inline m-1 m-md-2 rounded-3 px-1 px-sm-2 py-1 py-sm-3" style="background-color: #3e3f4b;">
+                    May occasionally generate incorrect information
+                </div>
+                <div class="d-inline m-1 m-md-2 rounded-3 px-1 px-sm-2 py-1 py-sm-3" style="background-color: #3e3f4b;">
+                    May occasionally produce harmful instructions or biased content
+                </div>
+                <div class="d-inline m-1 m-md-2 rounded-3 px-1 px-sm-2 py-1 py-sm-3" style="background-color: #3e3f4b;">
+                    Limited knowledge of world and events after 2021
+                </div>
             </div>
         </div>
-
-        <p class="subtitle-search"><a href="">ChatGPT Dec 15 Version</a>. Free Reseach Preview. Our goal is to
-            make AI systems more natural and safe to interact with. Your feedback will help us improve.</p>
-    </div>
-    </div>
-    </div>
-
-
-    <?php include_once './assets/footer.php'; ?>
-
-
-</body>
-
-</html>
+    </section>
+    <?php include 'assets/input.php';?>
+</main>
+<?php 
+include 'assets/modal.php';
+include 'assets/footer.php';
+?>
