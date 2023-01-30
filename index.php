@@ -8,9 +8,12 @@
     <!-- HOME -->
 
     <div class="container-right col col-lg-10 text-center" id="home">
-        <div id="message"></div>
+        <div>
+        <div id="message">
+            <div id="question">Question</div>
+        </div>
 
-        <div id="title">
+        <div id="title" style="display:none;">
 
             <h1 class="mt-1">ChatGPT</h1>
 
@@ -45,21 +48,19 @@
                     </div>
                 </div>
             </div>
-
+        </div>
             <!-- SEARCH BAR AND SUBTITLE -->
-
-            <div class="input-group right-search mb-5">
+            <div class="">
+            <div class="input-group right-search">
                 <input type="text" class="form-control input-right" aria-label="Recipient's username"
-                    aria-describedby="button-addon2">
+                    aria-describedby="button-addon2" id="input">
                 <button class="btn btn-outline-secondary" type="button" id="button"><i class="bi bi-send"></i></button>
             </div>
         </div>
 
         <p class="subtitle-search"><a href="">ChatGPT Dec 15 Version</a>. Free Reseach Preview. Our goal is to
             make AI systems more natural and safe to interact with. Your feedback will help us improve.</p>
-    </div>
-    </div>
-    </div>
+    </div> 
 
 
     <?php include_once './assets/footer.php'; ?>
