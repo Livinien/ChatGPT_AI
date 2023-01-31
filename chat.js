@@ -1,7 +1,7 @@
 const sendBtn = document.querySelector("#sendBtn"); // input
 const chatGpt = document.querySelector("#chatGpt"); // title
 const QAsection = document.createElement("section");
-const darkLight = document.getElementById("darkLight");
+const toggle = document.getElementById("toggle-mode");
 const mainPage = document.getElementById("mainPage");
 document.querySelector("#main").appendChild(QAsection); //message
 
@@ -306,6 +306,21 @@ function getAnswer(input) {
   return tab[index].answer;
 }
 
-darkLight.addEventListener("click", () => {
-  mainPage.className = "light";
+toggle.addEventListener("click", () => {
+  mainPage.classList.toggle("light-mode");
+  const cards = document.querySelectorAll(".card");
+  const inputContainer = document.getElementById("inputContainer");
+  if (mainPage.classList.contains("light-mode")) {
+    cards.forEach((card) => {
+      card.style.backgroundColor = "#f7f7f8";
+    });
+    inputContainer.style.backgroundColor = "#fff";
+    toggle.innerHTML = "<i class='bi bi-moon fs-6 pe-2'></i> Dark Mode";
+  } else {
+    cards.forEach((card) => {
+      card.style.backgroundColor = "#3e3f4b";
+    });
+    inputContainer.style.backgroundColor = "#3e3f4b";
+    toggle.innerHTML = "<i class='bi bi-sun fs-6 pe-2'></i>Light Mode";
+  }
 });

@@ -74,12 +74,33 @@ input {
   transform: scale(1.75);
 }
 
-.light {
-  background-color: white;
+.light-mode {
+  background-color: #fff !important;
   color: #343541;
 }
 
-.dark {
-  background-color: #343541;
-  color: white;
+
+.light-mode > #inputContainer {
+  fill: #8e8ea0;
 }
+
+
+#inputContainer {
+  background-color: #3e3f4b;
+}
+
+#Group_10235{
+  fill: #8e8ea0;
+}
+
+#mainPage {
+  background-color: #343541;
+}
+
+.card {
+  background-color: #3e3f4b;
+}
+
+
+
+/*style="background-color: #3e3f4b;"

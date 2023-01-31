@@ -40,8 +40,8 @@
                         }
                     }
                     </script>
-                    <a class="btn btn-dark d-flex col-align-self-start" href="#" role="button" id="darkLight"><i
-                            class="bi bi-moon pe-2"></i>Light mode</a>
+                    <a class="btn btn-dark d-flex col-align-self-start" href="#" role="button" id="toggle-mode"><i
+                            class="bi bi-sun fs-6 pe-2"></i>Light Mode</a>
                     <a class="btn btn-dark d-flex col-align-self-start" href="#" role="button"><i
                             class="bi bi-discord pe-2"></i>OpenAI Discord</a>
                     <a class="btn btn-dark d-flex col-align-self-start" href="#" role="button"><i
