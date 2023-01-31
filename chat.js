@@ -1,6 +1,8 @@
 const sendBtn = document.querySelector("#sendBtn"); // input
 const chatGpt = document.querySelector("#chatGpt"); // title
 const QAsection = document.createElement("section");
+const darkLight = document.getElementById("darkLight");
+const mainPage = document.getElementById("mainPage");
 document.querySelector("#main").appendChild(QAsection); //message
 
 QAsection.id = "qa-section";
@@ -8,8 +10,9 @@ QAsection.id = "qa-section";
 // document.querySelector('#input-section').before(QAsection)
 let punctuation = 0;
 
+//C'est une fonction qui retourne un signe de ponctuation aléatoire à partir d'un tableau de signes de ponctuation. La fonction génère un nombre aléatoire entre 0 et la longueur du tableau de ponctuations, utilise ce nombre pour indexer le tableau et renvoie la valeur à cet index.
 function randomPunctuation() {
-  var punctuations = [
+  let punctuations = [
     "!?",
     "!!",
     "??",
@@ -20,14 +23,15 @@ function randomPunctuation() {
     "??!??!??",
     "!!?!!?!!?!!",
   ];
-  var random = Math.floor(Math.random() * punctuations.length);
-  var randomValue = punctuations[random];
+  let random = Math.floor(Math.random() * punctuations.length);
+  let randomValue = punctuations[random];
   punctuation = randomValue;
   return punctuation;
 }
 
+// Ceci est une fonction qui renvoie une chaîne aléatoire à partir d'un tableau de chaînes liées au débogage. Le tableau contient des suggestions et des questions relatives au code de débogage.
 function debugMe() {
-  var debugMeArray = [
+  let debugMeArray = [
     "Pourquoi ?",
     "Reformule ta question.",
     "Reformule ta problématique.",
@@ -91,14 +95,13 @@ function chatAnswer(e) {
     const topDiv = document.querySelector("#top");
     topDiv.scrollTop = topDiv.offsetHeight;
   });
-
   //  si Groot actif il répond groot sinon il fait
   if (grootBox.checked) {
     randomPunctuation();
     questionDiv.innerHTML = `<div class="col-1 d-flex justify-content-end m-0 py-4"><img class="rounded-1" height="25px" width="25px" src="https://i.pinimg.com/474x/46/72/f8/4672f876389036583190d93a71aa6cb2.jpg"/></div><p class="col-9 col-sm-10 px-4 px-lg-5 py-4 m-0 mt-1 fs-6">${input.value}</p><div class="col-2 col-sm-1 d-flex m-0 justify-content-start text-white-50 py-4 fs-7 ps-2"><i class="bi bi-pencil-square"></i></div>`;
     answerDiv.innerHTML = `<div class="col-1 d-flex justify-content-end m-0 py-4"><img class="rounded-1" height="25px" width="25px" src="./logo.jpg"/></div><p class="col-9 col-sm-10 px-4 px-lg-5 py-4 m-0 mt-1 fs-6" id="groot${numberDiv}"></p><div class="col-2 col-sm-1 d-flex justify-content-start text-white-50 py-4"><i class="bi bi-hand-thumbs-up p-0 p-sm-1"></i><i class="bi bi-hand-thumbs-down p-0 p-sm-1 ps-1"></i></div>`;
     // Typewriter permet de simuler l'écriture en direct
-    var typewriter = new Typewriter(`#groot${numberDiv}`, {
+    let typewriter = new Typewriter(`#groot${numberDiv}`, {
       cursor: "",
     });
     typewriter
@@ -109,7 +112,7 @@ function chatAnswer(e) {
     questionDiv.innerHTML = `<div class="col-1 d-flex justify-content-end m-0 py-4"><img class="rounded-1" height="25px" width="25px" src="https://i.pinimg.com/474x/46/72/f8/4672f876389036583190d93a71aa6cb2.jpg"/></div><p class="col-9 col-sm-10 px-4 px-lg-5 py-4 m-0 mt-1 fs-6">${input.value}</p><div class="col-2 col-sm-1 d-flex m-0 justify-content-start text-white-50 py-4 fs-7 ps-2"><i class="bi bi-pencil-square"></i></div>`;
     answerDiv.innerHTML = `<div class="col-1 d-flex justify-content-end m-0 py-4"><img class="rounded-1" height="25px" width="25px" src="./logo.jpg"/></div><p class="col-9 col-sm-10 px-4 px-lg-5 py-4 m-0 mt-1 fs-6" id="debug${numberDiv}"></p><div class="col-2 col-sm-1 d-flex justify-content-start text-white-50 py-4"><i class="bi bi-hand-thumbs-up p-0 p-sm-1"></i><i class="bi bi-hand-thumbs-down p-0 p-sm-1 ps-1"></i></div>`;
     // Typewriter permet de simuler l'écriture en direct
-    var typewriter = new Typewriter(`#debug${numberDiv}`, {
+    let typewriter = new Typewriter(`#debug${numberDiv}`, {
       cursor: "",
     });
     typewriter.changeDelay(50).typeString(debugMe()).start();
@@ -117,7 +120,7 @@ function chatAnswer(e) {
     if (!input.value == "") {
       questionDiv.innerHTML = `<div class="col-1 d-flex justify-content-end m-0 py-4"><img class="rounded-1" height="25px" width="25px" src="https://i.pinimg.com/474x/46/72/f8/4672f876389036583190d93a71aa6cb2.jpg"/></div><p class="col-9 col-sm-10 px-4 px-lg-5 py-4 m-0 mt-1 fs-6">${input.value}</p><div class="col-2 col-sm-1 d-flex m-0 justify-content-start text-white-50 py-4 fs-7 ps-2"><i class="bi bi-pencil-square"></i></div>`;
       answerDiv.innerHTML = `<div class="col-1 d-flex justify-content-end m-0 py-4"><img class="rounded-1" height="25px" width="25px" src="./logo.jpg"/></div><p class="col-9 col-sm-10 px-4 px-lg-5 py-4 m-0 mt-1 fs-6" id="answer${numberDiv}"></p><div class="col-2 col-sm-1 d-flex justify-content-start text-white-50 py-4"><i class="bi bi-hand-thumbs-up p-0 p-sm-1"></i><i class="bi bi-hand-thumbs-down p-0 p-sm-1 ps-1"></i></div>`;
-      var typewriter = new Typewriter(`#answer${numberDiv}`, {
+      let typewriter = new Typewriter(`#answer${numberDiv}`, {
         cursor: "",
       });
       // modification
@@ -126,7 +129,7 @@ function chatAnswer(e) {
       // si le input est vide
       questionDiv.innerHTML = `<div class="col-1 d-flex justify-content-end m-0 py-4"><img class="rounded-1" height="25px" width="25px" src="https://i.pinimg.com/474x/46/72/f8/4672f876389036583190d93a71aa6cb2.jpg"/></div><p class="col-9 col-sm-10 px-4 px-lg-5 py-4 m-0 mt-1 fs-6">...</p><div class="col-2 col-sm-1 d-flex m-0 justify-content-start text-white-50 py-4 fs-7 ps-2"><i class="bi bi-pencil-square"></i></div>`;
       answerDiv.innerHTML = `<div class="col-1 d-flex justify-content-end m-0 py-4"><img class="rounded-1" height="25px" width="25px" src="./logo.jpg"/></div><p class="col-9 col-sm-10 px-4 px-lg-5 py-4 m-0 mt-1 fs-6" id="empty${numberDiv}"></p><div id="thumbs-div" class="col-2 col-sm-1 d-flex justify-content-start text-white-50 py-4"><i class="bi bi-hand-thumbs-up p-0 p-sm-1"></i><i class="bi bi-hand-thumbs-down p-0 p-sm-1 ps-1"></i></div>`;
-      var typewriter = new Typewriter(`#empty${numberDiv}`, {
+      let typewriter = new Typewriter(`#empty${numberDiv}`, {
         cursor: "",
       });
       typewriter
@@ -250,9 +253,9 @@ Enfin, la fonction renvoie soit la valeur de maxIndex si pickRandomAnswer n'incl
 */
 
 function getIndex(objectOccurence) {
-  var maxIndex;
-  var maxValue = 0;
-  var pickRandomAnswer = [];
+  let maxIndex;
+  let maxValue = 0;
+  let pickRandomAnswer = [];
   for (const index in objectOccurence) {
     const value = objectOccurence[index];
     if (value > maxValue) {
@@ -302,3 +305,7 @@ function getAnswer(input) {
   }
   return tab[index].answer;
 }
+
+darkLight.addEventListener("click", () => {
+  mainPage.className = "light";
+});

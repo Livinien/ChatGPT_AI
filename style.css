@@ -1,76 +1,85 @@
-body{
-    min-height: 850px;
+body {
+  min-height: 850px;
 }
 /*---------- Police ----------*/
 
-.fs-7{
-    font-size: 15px;
+.fs-7 {
+  font-size: 15px;
 }
 
-p, #p{
-    font-size: small;
+p,
+#p {
+  font-size: small;
 }
 
 /*----------- Buttons -----------*/
 
-.btn-outline-secondary{
-    border: 1px solid #393b3e;
-    transition: none;
+.btn-outline-secondary {
+  border: 1px solid #393b3e;
+  transition: none;
 }
 
-.btn-outline-secondary:hover{
-    border: none ;
-    background: #ffffff41;
+.btn-outline-secondary:hover {
+  border: none;
+  background: #ffffff41;
 }
 
 .offcanvas .btn-close {
-    top: 16px;
-    left: 40px;
-    border: 2px solid;
-    opacity: 0.9;
-    font-size: 13px;
-    padding: 10px ;
+  top: 16px;
+  left: 40px;
+  border: 2px solid;
+  opacity: 0.9;
+  font-size: 13px;
+  padding: 10px;
 }
 
-svg:hover{
-    transition: 500ms;
-    fill: rgba(255, 255, 255, 0.822) ;
+svg:hover {
+  transition: 500ms;
+  fill: rgba(255, 255, 255, 0.822);
 }
-
 
 /*----------- Chat Input -----------*/
 
-input{
-    outline : none;
+input {
+  outline: none;
 }
 
 /*------------- Hover --------------*/
-.btn.bg-dark-subtle:hover{
-    background: #353440;
+.btn.bg-dark-subtle:hover {
+  background: #353440;
 }
 
 .offcanvas-backdrop {
-    background-color: #67687aaf;
+  background-color: #67687aaf;
 }
 
-@media(min-width:768px){
-    #navbar{
-        position: sticky;
-        z-index: 2;
-        top: 0;
-    }
+@media (min-width: 768px) {
+  #navbar {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+  }
 }
 
-#qa-section i:hover{
-    color: white;
-    cursor: pointer;
-    transition: 200ms;
+#qa-section i:hover {
+  color: white;
+  cursor: pointer;
+  transition: 200ms;
 }
-
 
 /*Boutons like et dislike*/
 
 .bi-hand-thumbs-up:active,
-.bi-hand-thumbs-down:active{
-    transform: scale(1.75);
+.bi-hand-thumbs-down:active {
+  transform: scale(1.75);
+}
+
+.light {
+  background-color: white;
+  color: #343541;
+}
+
+.dark {
+  background-color: #343541;
+  color: white;
 }

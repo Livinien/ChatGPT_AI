@@ -3,7 +3,7 @@ include 'assets/header.php';
 include 'assets/nav.php';
 ?>
 <main class="position-relative col-12 col-md-9 col-xl-10 d-flex flex-column justify-content-between"
-    style="background-color: #343541;">
+    style="background-color: #343541;" id="mainPage">
     <div id="main" class="col-12">
     </div>
     <section id="chatGpt" class="col-11 col-lg-10 col-xl-8 col-xxl-6 mx-auto mt-sm-5 pt-sm-5">
